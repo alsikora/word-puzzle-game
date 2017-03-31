@@ -1,0 +1,12 @@
+@import "../app/assets/bootstrap/css/bootstrap.min.css";
+@import "../app/assets/bootstrap/css/grayscale.min.css";
+@import "../app/assets/font-awesome/css/font-awesome.min.css";
+
+.app {
+    height: 100%;
+}
+
+.btn-circle {
+    line-height: 0;
+    padding: 7px 24px;
+}
