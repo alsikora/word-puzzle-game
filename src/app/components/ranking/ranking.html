@@ -1,0 +1,17 @@
+<h3>Ranking</h3>
+<table class="table">
+    <thead>
+    <tr>
+        <th class="text-center">Rank</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">Score</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="entry in $ctrl.entries">
+        <td>{{ $index+1 }}</td>
+        <td>{{ entry.name }}</td>
+        <td>{{ entry.score }}</td>
+    </tr>
+    </tbody>
+</table>
