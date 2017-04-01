@@ -37,7 +37,7 @@ module.exports = function makeWebpackConfig() {
 
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/' : 'http://localhost:8080/',
+    publicPath: isProd ? '' : 'http://localhost:8080/',
 
     // Filename for entry points
     // Only adds hash in build mode
@@ -94,7 +94,7 @@ module.exports = function makeWebpackConfig() {
       loader: ExtractTextPlugin.extract({
         fallbackLoader: 'style-loader',
         loader: [
-          {loader: 'css-loader', query: {sourceMap: true}},
+          {loader: 'css-loader', query: {sourceMap: false}},
           {loader: 'postcss-loader'}
         ],
       })
@@ -106,7 +106,7 @@ module.exports = function makeWebpackConfig() {
       // Pass along the updated reference to your code
       // You can add here any file extension you want to get copied to your output
       test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-      loader: 'file-loader'
+      loader: 'file-loader?name=../assets/[hash].[ext]'
     }, {
       // HTML LOADER
       // Reference: https://github.com/webpack/raw-loader
