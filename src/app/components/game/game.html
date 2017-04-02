@@ -1,0 +1,11 @@
+<h2>What is "{{ $ctrl.currentMangledWord }}"?</h2>
+
+<div class="form-group form-group-lg">
+  <input type="text" autofocus class="form-control" id="answer" ng-model="$ctrl.currentAnswer" placeholder="Your answer" ng-focus="true" ng-change="$ctrl.onAnswerChange($ctrl.currentAnswer)">
+</div>
+
+<p>
+  Score: {{ $ctrl.score }} points.<br />
+  Time remaining: {{ $ctrl.remainingTime }} seconds.
+</p>
+

@@ -1,6 +1,8 @@
 import * as firebase from 'firebase';
 import 'firebase/database';
 
+
+// Firebase database configuration
 const config = {
     apiKey: "AIzaSyA8Q_eFL8I5-LJlz1D-pkMbf2bpJWBEn8g",
     authDomain: "word-puzzle-game-13323.firebaseapp.com",
@@ -19,6 +21,11 @@ class FirebaseService {
         this.dictionaryRef = this.database.ref('/dictionary');
     }
 
+    /**
+     * Post request with new user
+     * @param name
+     * @param score
+     */
     savePlayer(name, score) {
         this.playersRef.push({
             name,

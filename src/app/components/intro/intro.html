@@ -1,0 +1,14 @@
+<h1>Word Puzzle Game</h1>
+<form ng-submit="$ctrl.startGame($event)" role="form">
+    <div class="form-group form-group-lg">
+        <input type="text"
+               class="form-control"
+               ng-focus="true"
+               placeholder="Type your name"
+               ng-model="$ctrl.playerName">
+    </div>
+
+    <button class="btn btn-circle" ng-disabled="!$ctrl.playerName">
+        <i class="fa fa-angle-double-right animated"></i>
+    </button>
+</form>

@@ -26,7 +26,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        TODO: game
+                        <intro ng-hide="$ctrl.isPlayerDefined"></intro>
+                        <words-game ng-hide="!$ctrl.isGameActive"></words-game>
+                        <result ng-show="$ctrl.isGameFinished"></result>
                     </div>
                 </div>
             </div>
