@@ -5,8 +5,8 @@ import Gameboard from './game/game';
 import Result from './result/result';
 
 export default angular.module('app.components', [
-    Ranking,
     Intro,
     Gameboard,
+    Ranking,
     Result
 ]).name;

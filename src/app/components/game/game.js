@@ -3,6 +3,7 @@ import template from './game.html';
 import controller from './game.controller';
 import Game from '../../common/game/game';
 import Firebase from '../../common/firebase/firebase';
+import GlobalEvents from '../../common/global-events/global-events';
 
 
 const gameComponent = {
@@ -12,4 +13,4 @@ const gameComponent = {
     controller
 };
 
-export default angular.module('wordsGame', [Game, Firebase]).component('wordsGame', gameComponent).name;
+export default angular.module('wordsGame', [Game, Firebase, GlobalEvents]).component('wordsGame', gameComponent).name;
